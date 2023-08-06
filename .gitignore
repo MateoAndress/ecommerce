@@ -1,1 +1,10 @@
+# Ignorar directorio de dependencias de Composer
+/vendor/
+
+# Ignorar archivo de bloqueo de Composer
+composer.lock
+
+# Ignorar archivo de configuración de Composer
+composer.phar
+
 .env
