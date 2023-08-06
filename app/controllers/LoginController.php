@@ -1,4 +1,6 @@
 <?php 
+require_once __DIR__ . '/../../config/database.php';
+
 
 class LoginController{
 
@@ -9,6 +11,8 @@ class LoginController{
             $password = $_POST['password'];
             echo "Usuario: " . $user;
             echo "Contraseña: ". $password;
+            $database = new DatabaseConnection();
+            $connection = $database->getConnection();
 ;        }
 
     }

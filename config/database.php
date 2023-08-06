@@ -1,7 +1,7 @@
 <?php 
-require_once __DIR__.'/vendor/autoload.php';
+require_once __DIR__.'/../vendor/autoload.php';
 
-$dotenv = Dotenv\Dotenv::createImmutable(__DIR__);
+$dotenv = Dotenv\Dotenv::createImmutable(__DIR__ . '/..');
 $dotenv->load();
 
 class DatabaseConnection{
@@ -11,7 +11,7 @@ class DatabaseConnection{
     private $username;
     private $password;
     private $dbname;
-    private $charset;
+    private $charset = 'utf8mb4';
 
     private $connection;
 
