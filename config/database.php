@@ -33,10 +33,8 @@ class DatabaseConnection{
                 PDO::ATTR_EMULATE_PREPARES => false,
             ];
             $this->connection = new PDO($dsn, $this->username, $this->password, $options);
-            echo "conectado";
         }catch(PDOException $e){
             throw new Exception("Error de conexión: " . $e->getMessage());
-            echo "NO sconectado";
         }
     }
 
